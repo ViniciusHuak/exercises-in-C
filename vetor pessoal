@@ -1,0 +1,34 @@
+#include <stdio.h> // Biblioteca para entrada e saída
+
+typedef struct {
+double peso;
+int idade;
+double altura;
+} pessoa;
+//criamos uma struct com o nome da pessoa que possui as seguintes variáveis: peso, idade
+e altura
+
+void coletarDados(Pessoa pessoas[], int numPessoas) {
+for (int i = 0; i < numPessoas; i++) {
+printf("Digite a idade da pessoa %d: ", i + 1);
+scanf("%d", &pessoas[i].idade);
+printf("Digite a altura da pessoa %lf (em metros): ", i + 1);
+scanf("%lf", &pessoas[i].altura);
+printf("Digite o peso da pessoa %lf (em quilogramas): ", i + 1);
+scanf("%lf", &pessoas[i].peso);
+}
+//função para imprimir e coletar os dados
+}
+int main(){
+pessoa pessoas[5], p1; //ligando o struct com um vetor ;
+pessoas[0].peso=80.6; //passando as informações do peso do struct
+pessoas[0].idade=40; //informações idade
+pessoas[0].altura=1.70; //informações altura todas passadas de forma manual
+p1=pessoas[0]; //pessoa 1 é a posição 0 do vetor
+if(p1.idade>20){
+p1.idade++; //coloca um a mais na idade para as seguintes posições do vetor
+pessoas[1]=pessoas[0]; //pessoa de posição 1 recebe o mesmo valor que a 0
+coletarDados(pessoas, 5);
+return 0;
+}
+}

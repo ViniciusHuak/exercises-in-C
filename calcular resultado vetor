@@ -1,0 +1,20 @@
+#include <stdio.h> // Biblioteca
+int calcularResultado(int v[], int n); // Declara a função calcularResultado.
+int main() {
+int vetor[5], i, resultado; // Declara o vetor, uma variável i e uma variável para o resultado.
+for (i = 0; i < 5; i++) { // Loop para preencher o vetor.
+
+vetor[i] = i * 2; // Cada posição do vetor recebe o valor de i * 2.
+}
+resultado = calcularResultado(vetor, 5); // Chama a função para somar os valores do
+vetor.
+printf("O resultado é: %d\n", resultado); // Imprime o resultado da soma.
+return 0; // Fim do programa.
+}
+int calcularResultado(int v[], int n) {
+int i, soma = 0; // Declara soma e a variável de controle i.
+for (i = 0; i < n; i++) { // Loop para somar os elementos do vetor.
+soma += v[i]; // Soma cada valor do vetor à variável soma.
+}
+return soma; // Retorna o valor total da soma.
+}

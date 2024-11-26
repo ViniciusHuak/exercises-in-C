@@ -1,0 +1,17 @@
+#include <stdio.h>
+void exibirInverso(int v[], int n) {
+for (int i = n - 1; i >= 0; i--) {
+printf("%d ", v[i]);
+}
+printf("\n");
+}
+int main() {
+int vetor[10];
+
+printf("Digite 10 números:\n");
+for (int i = 0; i < 10; i++) {
+scanf("%d", &vetor[i]);
+}
+exibirInverso(vetor, 10);
+return 0;
+}

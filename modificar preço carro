@@ -1,0 +1,30 @@
+#include <stdio.h> // Biblioteca para entrada e saída
+#include <string.h> // Biblioteca para manipular strings
+#include <locale.h> // Biblioteca para definir localização
+typedef struct {
+char modelo[50]; // Modelo do carro
+int ano; // Ano do carro
+double preco; // Preço do carro
+} Carro; // Define a estrutura Carro
+void modificarPreco(Carro *c, double novoPreco) {
+c->preco = novoPreco; // Atualiza o preço do carro
+}
+void imprimirCarro(Carro *c) {
+printf("Modelo: %s\n", c->modelo); // Mostra o modelo
+printf("Ano: %d\n", c->ano); // Mostra o ano
+printf("Preço: R$ %.2lf\n", c->preco); // Mostra o preço
+}
+int main() {
+setlocale(LC_ALL, "portuguese"); // Define a linguagem para português
+Carro carro1; // Cria um carro
+strcpy(carro1.modelo, "Xyz"); // Define o modelo como "Xyz"
+carro1.ano = 2020; // Define o ano como 2020
+
+carro1.preco = 90000.00; // Define o preço como 90000.00
+printf("Dados antes da modificação:\n");
+imprimirCarro(&carro1); // Mostra dados iniciais
+modificarPreco(&carro1, 115000.00); // Atualiza o preço para 115000.00
+printf("\nDados após a modificação do preço:\n");
+imprimirCarro(&carro1); // Mostra dados atualizados
+return 0;
+}

@@ -1,0 +1,21 @@
+#include <stdio.h>
+int multiplicarValores(int v[], int n) {
+int produto = 1;
+for (int i = 0; i < n; i++) {
+produto *= v[i];
+}
+return produto;
+}
+
+int main() {
+int n;
+printf("Quantos valores deseja inserir? ");
+scanf("%d", &n);
+int vetor[n];
+printf("Digite os valores:\n");
+for (int i = 0; i < n; i++) {
+scanf("%d", &vetor[i]);
+}
+printf("Produto dos valores: %d\n", multiplicarValores(vetor, n));
+return 0;
+}
